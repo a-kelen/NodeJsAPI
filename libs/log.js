@@ -7,10 +7,10 @@ return new winston.Logger({
  		transports : [
  			new winston.transports.Console({
  				colorize: true,
-level: 'debug',
-label: path 
-}) 
-]
+				level: 'debug',
+				label: path 
+			}) 
+		]
  	});
  }
 
