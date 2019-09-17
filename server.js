@@ -67,7 +67,7 @@ app.get('/api/articles', function(req, res) {
                });
           } else {
                console.log(err);
-               if(err.name == 'ValidationError') {
+               if (err.name == 'ValidationError') {
                     res.statusCode = 400;
                     res.send({ error: 'Validation error' });
                } else {
@@ -80,7 +80,7 @@ app.get('/api/articles', function(req, res) {
  });
  app.get('/api/articles/:id', function(req, res) {
      return ArticleModel.findById(req.params.id, function (err, article) {
-          if(!article) {
+          if (!article) {
                res.statusCode = 404;
                return res.send({ error: 'Not found' });
           }
@@ -95,7 +95,7 @@ app.get('/api/articles', function(req, res) {
  });
  app.put('/api/articles/:id', function (req, res){
      return ArticleModel.findById(req.params.id, function (err, article) {
-          if(!article) {
+          if (!article) {
                res.statusCode = 404;
                return res.send({ error: 'Not found' });
           }
@@ -122,7 +122,7 @@ app.get('/api/articles', function(req, res) {
  });
  app.delete('/api/articles/:id', function (req, res){
      return ArticleModel.findById(req.params.id, function (err, article) {
-          if(!article) {
+          if (!article) {
                res.statusCode = 404;
                return res.send({ error: 'Not found' });
           }
