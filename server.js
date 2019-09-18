@@ -56,7 +56,7 @@ app.get('/api/articles', function(req, res) {
           author: req.body.author,
           description: req.body.description,
           images: req.body.images
-          });
+     });
      console.log(req.body);
      article.save(function (err) {
           if (!err) {
